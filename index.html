@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Yutian Chu</title>
+
+  <meta
+    name="description"
+    content="Academic homepage of Yutian Chu, Nanjing University of Posts and Telecommunications."
+  >
+  <meta name="author" content="Yutian Chu">
+
+  <style>
+    :root {
+      --bg: #fafaf8;
+      --card: #ffffff;
+      --text: #20252b;
+      --muted: #68727d;
+      --line: #e5e7e8;
+      --blue: #254f76;
+      --blue-soft: #edf3f7;
+      --max-width: 980px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Helvetica,
+        Arial,
+        sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(var(--max-width), calc(100% - 42px));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid var(--line);
+      background: rgba(250, 250, 248, 0.93);
+      backdrop-filter: blur(12px);
+    }
+
+    nav {
+      min-height: 66px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .brand {
+      color: var(--text);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      font-size: 0.94rem;
+    }
+
+    main {
+      padding: 76px 0 50px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.55fr 0.85fr;
+      gap: 60px;
+      padding-bottom: 62px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      margin-bottom: 14px;
+      color: var(--blue);
+      font-size: 0.83rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3.2rem, 8vw, 5.6rem);
+      font-weight: 500;
+      line-height: 0.98;
+      letter-spacing: -0.05em;
+    }
+
+    .subtitle {
+      margin: 0 0 24px;
+      max-width: 690px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .intro {
+      max-width: 720px;
+      margin: 0;
+      font-size: 1.07rem;
+    }
+
+    .contact-card {
+      padding: 28px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 16px 45px rgba(30, 40, 50, 0.05);
+    }
+
+    .contact-card h2 {
+      margin: 0 0 20px;
+      color: var(--muted);
+      font-size: 0.84rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .contact-item {
+      margin: 18px 0;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-item:first-of-type {
+      margin-top: 0;
+    }
+
+    .label {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--muted);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    section {
+      padding: 56px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-layout {
+      display: grid;
+      grid-template-columns: 215px 1fr;
+      gap: 42px;
+    }
+
+    .section-title {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.55rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .chip {
+      padding: 7px 13px;
+      background: var(--blue-soft);
+      border: 1px solid #d9e4ec;
+      border-radius: 999px;
+      color: #294b67;
+      font-size: 0.91rem;
+    }
+
+    .item {
+      margin-bottom: 30px;
+      padding-bottom: 30px;
+      border-bottom: 1px dashed var(--line);
+    }
+
+    .item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .item-heading {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .item-title {
+      font-weight: 700;
+    }
+
+    .item-meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+
+    .item p {
+      margin: 8px 0 0;
+      color: #434e58;
+    }
+
+    footer {
+      padding: 28px 0 42px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    @media (max-width: 760px) {
+      main {
+        padding-top: 48px;
+      }
+
+      .hero,
+      .section-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .item-heading {
+        display: block;
+      }
+
+      .item-meta {
+        margin-top: 3px;
+        white-space: normal;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a class="brand" href="#top">Yutian Chu</a>
+
+      <div class="nav-links">
+        <a href="#research">Research</a>
+        <a href="#work">Selected Work</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="top" class="container">
+
+  <div class="hero">
+
+    <div>
+      <div class="eyebrow">
+        Mathematics · Optimization · Machine Learning
+      </div>
+
+      <h1>Yutian Chu</h1>
+
+      <p class="subtitle">
+        Undergraduate researcher in Information and Computing Science
+        at Nanjing University of Posts and Telecommunications.
+      </p>
+
+      <p class="intro">
+        I am interested in mathematical and computational methods for
+        decision-making under uncertainty. My current interests lie at
+        the intersection of stochastic optimization, sequential
+        decision-making, reinforcement learning, and operations research.
+        I am particularly interested in how mathematical structure and
+        learning can be combined to build reliable decision systems.
+      </p>
+    </div>
+
+
+    <aside id="contact" class="contact-card">
+
+      <h2>Contact</h2>
+
+      <div class="contact-item">
+        <span class="label">Email</span>
+        <a href="mailto:b23090129@njupt.edu.cn">
+          b23090129@njupt.edu.cn
+        </a>
+      </div>
+
+      <div class="contact-item">
+        <span class="label">Affiliation</span>
+        School of Science<br>
+        Nanjing University of Posts and Telecommunications<br>
+        Nanjing, China
+      </div>
+
+      <div class="contact-item">
+        <span class="label">GitHub</span>
+        <a
+          href="https://github.com/cyt195"
+          target="_blank"
+          rel="noopener"
+        >
+          github.com/cyt195
+        </a>
+      </div>
+
+    </aside>
+
+  </div>
+
+
+  <section id="research">
+
+    <div class="section-layout">
+
+      <h2 class="section-title">
+        Research interests
+      </h2>
+
+      <div class="chips">
+
+        <span class="chip">
+          Stochastic Optimization
+        </span>
+
+        <span class="chip">
+          Sequential Decision-Making
+        </span>
+
+        <span class="chip">
+          Reinforcement Learning
+        </span>
+
+        <span class="chip">
+          Operations Research
+        </span>
+
+        <span class="chip">
+          Multi-Agent Systems
+        </span>
+
+        <span class="chip">
+          Decision-Making under Uncertainty
+        </span>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section id="work">
+
+    <div class="section-layout">
+
+      <h2 class="section-title">
+        Selected work
+      </h2>
+
+      <div>
+
+        <article class="item">
+
+          <div class="item-heading">
+            <div class="item-title">
+              Decision-making under exogenous uncertainty
+            </div>
+
+            <div class="item-meta">
+              Current research
+            </div>
+          </div>
+
+          <p>
+            I study how uncertain futures can be represented efficiently
+            in multistage decision problems when planning capacity is
+            limited, with an emphasis on retaining information that
+            matters for downstream decisions.
+          </p>
+
+        </article>
+
+
+        <article class="item">
+
+          <div class="item-heading">
+            <div class="item-title">
+              Urban routing and resource allocation
+            </div>
+
+            <div class="item-meta">
+              Optimization
+            </div>
+          </div>
+
+          <p>
+            Research experience with multi-vehicle and multi-trip routing,
+            heterogeneous resource constraints, and mathematical
+            optimization for urban operational systems.
+          </p>
+
+        </article>
+
+
+        <article class="item">
+
+          <div class="item-heading">
+            <div class="item-title">
+              Data-driven operational modeling
+            </div>
+
+            <div class="item-meta">
+              Machine Learning
+            </div>
+          </div>
+
+          <p>
+            Experience with forecasting, temporal models, and data-driven
+            analysis for operational problems involving retail demand and
+            urban mobility.
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section id="education">
+
+    <div class="section-layout">
+
+      <h2 class="section-title">
+        Education
+      </h2>
+
+      <div class="item">
+
+        <div class="item-heading">
+
+          <div class="item-title">
+            Nanjing University of Posts and Telecommunications
+          </div>
+
+          <div class="item-meta">
+            Nanjing, China
+          </div>
+
+        </div>
+
+        <p>
+          B.Sc. candidate in Information and Computing Science,
+          School of Science.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  <div class="container">
+    © 2026 Yutian Chu · Last updated August 2026
+  </div>
+
+</footer>
+
+</body>
+</html>
