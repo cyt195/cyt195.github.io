@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="Academic homepage of Yutian Chu, Nanjing University of Posts and Telecommunications."
+    content="Yutian Chu works on mathematical optimization, AI algorithms, and time-series models. Undergraduate at NUPT and Research Assistant at ShanghaiTech University."
   >
   <meta name="author" content="Yutian Chu">
 
@@ -248,6 +248,68 @@
       color: #434e58;
     }
 
+    section,
+    aside {
+      scroll-margin-top: 90px;
+    }
+
+    .current-role {
+      margin: 20px 0 0;
+      color: #434e58;
+    }
+
+    .item-title {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .item-heading > .item-title {
+      min-width: 0;
+    }
+
+    .item-meta {
+      flex-shrink: 0;
+    }
+
+    .item .item-role {
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    .research-points {
+      margin: 12px 0 0;
+      padding-left: 20px;
+      color: #434e58;
+    }
+
+    .research-points li + li {
+      margin-top: 7px;
+    }
+
+    .paper-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+      margin-top: 12px;
+      font-size: 0.93rem;
+    }
+
+    .paper-note {
+      font-size: 0.94rem;
+    }
+
+    .honors {
+      margin: 14px 0 0;
+      padding-left: 20px;
+      color: #434e58;
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--blue);
+      outline-offset: 4px;
+    }
+
     footer {
       padding: 28px 0 42px;
       color: var(--muted);
@@ -290,7 +352,8 @@
 
       <div class="nav-links">
         <a href="#research">Research</a>
-        <a href="#work">Selected Work</a>
+        <a href="#publications">Publications</a>
+        <a href="#work">Experience</a>
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </div>
@@ -304,7 +367,7 @@
 
     <div>
       <div class="eyebrow">
-        Mathematics · Optimization · Machine Learning
+        Mathematical Optimization · AI Algorithms
       </div>
 
       <h1>Yutian Chu</h1>
@@ -315,12 +378,19 @@
       </p>
 
       <p class="intro">
-        I am interested in mathematical and computational methods for
-        decision-making under uncertainty. My current interests lie at
-        the intersection of stochastic optimization, sequential
-        decision-making, reinforcement learning, and operations research.
-        I am particularly interested in how mathematical structure and
-        learning can be combined to build reliable decision systems.
+        I study mathematical optimization and algorithms for learning and
+        decision-making. My current work spans optimization geometry,
+        structured preconditioning, decision-relevant representations of
+        uncertainty, and time-series models. More broadly, I am interested
+        in reinforcement and multi-agent learning, generalization, and
+        world models for reliable decision-making.
+      </p>
+
+      <p class="current-role">
+        I am currently a Research Assistant at
+        <a href="https://www.shanghaitech.edu.cn/eng/" target="_blank" rel="noopener">ShanghaiTech University</a>,
+        working with <a href="https://saying.ren/" target="_blank" rel="noopener">Prof. Kan Ren</a>
+        on time-series model modification and evaluation.
       </p>
     </div>
 
@@ -342,10 +412,17 @@
       </div>
 
       <div class="contact-item">
-        <span class="label">Affiliation</span>
+        <span class="label">Education</span>
         School of Science<br>
         Nanjing University of Posts and Telecommunications<br>
         Nanjing, China
+      </div>
+
+      <div class="contact-item">
+        <span class="label">Current research</span>
+        Research Assistant<br>
+        ShanghaiTech University<br>
+        <a href="https://saying.ren/" target="_blank" rel="noopener">Prof. Kan Ren</a>
       </div>
 
       <div class="contact-item">
@@ -374,27 +451,27 @@
       <div class="chips">
 
         <span class="chip">
-          Stochastic Optimization
+          Optimization Geometry &amp; Preconditioning
         </span>
 
         <span class="chip">
-          Sequential Decision-Making
+          Mathematical Foundations of Machine Learning
         </span>
 
         <span class="chip">
-          Reinforcement Learning
+          Reinforcement &amp; Multi-Agent Learning
         </span>
 
         <span class="chip">
-          Operations Research
+          Time-Series Foundation Models
         </span>
 
         <span class="chip">
-          Multi-Agent Systems
+          Generalization &amp; Robustness
         </span>
 
         <span class="chip">
-          Decision-Making under Uncertainty
+          Sequential Decision Algorithms &amp; World Models
         </span>
 
       </div>
@@ -403,81 +480,115 @@
 
   </section>
 
-  <section id="work">
-
+  <section id="publications">
     <div class="section-layout">
-
-      <h2 class="section-title">
-        Selected work
-      </h2>
-
+      <h2 class="section-title">Publications</h2>
       <div>
-
         <article class="item">
-
           <div class="item-heading">
-            <div class="item-title">
-              Decision-making under exogenous uncertainty
-            </div>
-
-            <div class="item-meta">
-              Current research
-            </div>
+            <h3 class="item-title">
+              <a href="papers/OPT2026_CAMERA_READY.pdf" target="_blank" rel="noopener">What Is Richer Optimization Geometry Worth?<br>Hessian-Blind Pricing of Structured Preconditioners</a>
+            </h3>
+            <div class="item-meta">2026</div>
           </div>
-
-          <p>
-            I study how uncertain futures can be represented efficiently
-            in multistage decision problems when planning capacity is
-            limited, with an emphasis on retaining information that
-            matters for downstream decisions.
-          </p>
-
+          <p><strong>Yutian Chu</strong></p>
+          <p>NeurIPS 2026 Workshop on Optimization for Machine Learning (OPT). <strong>Accepted.</strong></p>
+          <p class="paper-note">Exact local progress and compute-price thresholds for frozen structured preconditioners, with Hessian-blind estimation from stochastic gradients and secants.</p>
+          <div class="paper-links">
+            <a href="papers/OPT2026_CAMERA_READY.pdf" target="_blank" rel="noopener" aria-label="Read the OPT 2026 camera-ready paper as a PDF">Camera-ready PDF</a>
+          </div>
         </article>
 
         <article class="item">
-
           <div class="item-heading">
-            <div class="item-title">
-              Urban routing and resource allocation
-            </div>
-
-            <div class="item-meta">
-              Optimization
-            </div>
+            <h3 class="item-title">
+              <a href="https://ieeexplore.ieee.org/document/11509437" target="_blank" rel="noopener">Physics-Consistent Self-Supervised Multi-Sensor Transformer for Edge-Intelligent Electronic Systems: Robust Fault Diagnosis under Domain Shift</a>
+            </h3>
+            <div class="item-meta">2026</div>
           </div>
-
-          <p>
-            Research experience with multi-vehicle and multi-trip routing,
-            heterogeneous resource constraints, and mathematical
-            optimization for urban operational systems.
-          </p>
-
-        </article>
-
-        <article class="item">
-
-          <div class="item-heading">
-            <div class="item-title">
-              Data-driven operational modeling
-            </div>
-
-            <div class="item-meta">
-              Machine Learning
-            </div>
+          <p><strong>Yutian Chu</strong>, Yan Zhou</p>
+          <p>2026 2nd International Conference on Power Electronics and Electric Drives (PEED), pp. 284–290.</p>
+          <p class="paper-note">Self-supervised temporal representations and physics-consistency regularization for fault diagnosis under label scarcity and domain shift, with efficient on-device inference.</p>
+          <div class="paper-links">
+            <a href="https://ieeexplore.ieee.org/document/11509437" target="_blank" rel="noopener">IEEE Xplore</a>
+            <a href="https://doi.org/10.1109/PEED69047.2026.00055" target="_blank" rel="noopener">DOI</a>
+            <a href="https://ieeexplore.ieee.org/xpl/conhome/11509368/proceeding" target="_blank" rel="noopener">Proceedings</a>
           </div>
-
-          <p>
-            Experience with forecasting, temporal models, and data-driven
-            analysis for operational problems involving retail demand and
-            urban mobility.
-          </p>
-
         </article>
-
       </div>
-
     </div>
+  </section>
 
+  <section id="work">
+    <div class="section-layout">
+      <h2 class="section-title">Research experience</h2>
+      <div>
+        <article class="item">
+          <div class="item-heading">
+            <h3 class="item-title">Time-Series Model Development</h3>
+            <div class="item-meta">Current</div>
+          </div>
+          <p class="item-role">Research Assistant · ShanghaiTech University<br>Advisor: <a href="https://saying.ren/" target="_blank" rel="noopener">Prof. Kan Ren</a></p>
+          <p>
+            Working on the modification and evaluation of time-series models,
+            with an interest in model behavior, forecasting, and generalization.
+          </p>
+        </article>
+
+        <article class="item">
+          <div class="item-heading">
+            <h3 class="item-title">Optimization Geometry and Structured Preconditioning</h3>
+            <div class="item-meta">2026</div>
+          </div>
+          <p class="item-role">Independent research · Sole author</p>
+          <ul class="research-points">
+            <li>Derived exact one-step progress and scale-invariant break-even compute thresholds for frozen structured preconditioners in a stochastic-quadratic model.</li>
+            <li>Developed Hessian-blind estimators using cross-fitted gradients and stochastic secants; evaluated 1,728 controlled paired-spectrum instances (Spearman correlation 0.993; log-price MAE 0.007).</li>
+            <li>Studied when progress gains justify the costs of richer geometry. The paper is accepted at NeurIPS 2026 OPT.</li>
+          </ul>
+        </article>
+
+        <article class="item">
+          <div class="item-heading">
+            <h3 class="item-title">Decision-Relevant Scenario Trees under Planning Budgets</h3>
+            <div class="item-meta">Aug 2026–Present</div>
+          </div>
+          <p class="item-role">Independent research · Manuscript comments from Prof. Sean R. Sinclair</p>
+          <ul class="research-points">
+            <li>Studied representations of uncertainty that preserve Bellman action preferences and derived bounds connecting preference distortion to root decision regret.</li>
+            <li>Developed an exact leaf-budget dynamic program for pruning a fixed finite refinement hierarchy; exhaustively evaluated 57,286 candidate trees in a controlled three-stage inventory setting.</li>
+          </ul>
+          <p class="paper-note">Manuscript submitted to Algorithmic Learning Theory (ALT 2027).</p>
+        </article>
+
+        <article class="item">
+          <div class="item-heading">
+            <h3 class="item-title">Physics-Consistent Self-Supervised Transformer for Fault Diagnosis</h3>
+            <div class="item-meta">Nov 2025–Feb 2026</div>
+          </div>
+          <p class="item-role">Team lead · First and corresponding author</p>
+          <ul class="research-points">
+            <li>Combined masked reconstruction, cross-modal contrastive learning, and temporal prediction for multi-sensor representations; achieved 76.21% Macro-F1 with 1% labeled data.</li>
+            <li>Used physics-consistency regularization for cross-device and cross-load generalization, achieving 81.12% mean Macro-F1.</li>
+            <li>Reduced embedded-CPU inference latency from 30.83 ms to 11.47 ms using token pruning and INT8 quantization.</li>
+          </ul>
+          <p class="paper-note">Published in the PEED 2026 proceedings.</p>
+        </article>
+
+        <article class="item">
+          <div class="item-heading">
+            <h3 class="item-title">Multi-Vehicle, Multi-Trip Waste Collection Optimization</h3>
+            <div class="item-meta">Sep 2025–Mar 2026</div>
+          </div>
+          <p class="item-role">First author · Academic supervisor: Prof. Yi Yingying</p>
+          <ul class="research-points">
+            <li>Formulated a two-stage mixed-integer model with heterogeneous fleets, time windows, facility capacities, and emissions costs; implemented adaptive large neighborhood search (ALNS).</li>
+            <li>Evaluated a Nanjing case with 160 collection sites, 25 transfer stations, and five treatment facilities; obtained 26.0% lower costs and 30.5% lower emissions against the study baselines.</li>
+          </ul>
+          <p class="paper-note">Manuscript submitted to <em>Systems</em> (JCR Q1, Social Sciences, Interdisciplinary).</p>
+        </article>
+      </div>
+    </div>
   </section>
 
   <section id="education">
@@ -497,15 +608,23 @@
           </div>
 
           <div class="item-meta">
-            Nanjing, China
+            Sep 2023–Jun 2027
           </div>
 
         </div>
 
         <p>
-          Undergraduate student in Information and Computing Science,
-          School of Science. Expected graduation: 2027.
+          B.S. in Information and Computing Science, School of Science.<br>
+          Expected graduation: June 2027. Average score: 86.2/100.
         </p>
+
+        <p>Selected coursework: Mathematical Analysis, Advanced Algebra, Probability Theory, Numerical Analysis, and Data Structures and Algorithms.</p>
+
+        <ul class="honors">
+          <li>Third Prize, Asia and Pacific Mathematical Modeling Competition (2024)</li>
+          <li>Provincial Third Prize, National Mathematical Modeling Competition for College Students (2025)</li>
+          <li>Third-Class Scholarship, Nanjing University of Posts and Telecommunications (2024–2025)</li>
+        </ul>
 
       </div>
 
@@ -518,7 +637,7 @@
 <footer>
 
   <div class="container">
-    © 2026 Yutian Chu · Last updated August 2026
+    © 2026 Yutian Chu · Last updated November 2026
   </div>
 
 </footer>
